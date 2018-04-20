@@ -22,9 +22,7 @@
 import ctypes
 from ctypes import cdll
 import os
-import rospkg
-rp = rospkg.RosPack()
-path = os.path.join(rp.get_path("dash"), "include", "libdxl_x64_c.so")
+path = os.getcwd() + "/libdxl_x64_c.so"
 # path = os.path.dirname(os.getcwd()) + "/catkin_ws/src/dash_ros/inc/libdxl_sbc_c.so"
 dxl_lib = cdll.LoadLibrary(path)     # for linux 64bit
 
